@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream font-body text-navy antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    outline: 3px solid #ffc436;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-body text-[15px] font-semibold transition-all duration-200 active:scale-[0.97];
+  }
+
+  .btn-coral {
+    @apply btn bg-coral text-white shadow-[0_8px_20px_-8px_rgba(255,86,48,0.7)] hover:-translate-y-0.5 hover:bg-[#f0471f];
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-navy bg-transparent text-navy hover:-translate-y-0.5 hover:bg-navy hover:text-white;
+  }
+
+  .card {
+    @apply rounded-3xl border border-line bg-white shadow-soft;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-extrabold leading-tight tracking-tight text-navy sm:text-4xl;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
