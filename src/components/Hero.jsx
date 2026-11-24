@@ -70,7 +70,6 @@ export default function Hero() {
               resuelven
               <Sparkle className="absolute -right-6 -top-4 h-7 w-7 animate-twinkle sm:-right-8 sm:-top-5 sm:h-9 sm:w-9" />
             </span>
-            .
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
