@@ -16,9 +16,13 @@ export const CATEGORIES = [
   "Finanzas y Empleo",
 ];
 
+export const BASE_PRICE = 12;
+export const SALE_PRICE = 7;
+
 export const kits = [
   {
     id: "chamba",
+    onSale: true,
     number: 1,
     title: "Kit Chamba",
     subtitle: "Consigue empleo con IA",
@@ -90,6 +94,7 @@ export const kits = [
   },
   {
     id: "influ",
+    onSale: true,
     number: 4,
     title: "Kit Influ",
     subtitle: "Crea tu influencer con IA",
@@ -116,6 +121,7 @@ export const kits = [
   },
   {
     id: "culebron",
+    onSale: true,
     number: 5,
     title: "Kit Culebrón",
     subtitle: "Crea tu novela con IA",

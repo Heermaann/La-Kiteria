@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { X, Check, Instagram, Package } from "lucide-react";
 import { KitImage } from "./SmartImage.jsx";
+import PriceTag from "./PriceTag.jsx";
 import WhatsAppIcon from "./icons/WhatsAppIcon.jsx";
 import {
   getWhatsAppLink,
@@ -80,6 +81,10 @@ export default function KitModal({ kit, onClose }) {
               <p className="mt-3 text-[15px] leading-relaxed text-muted">
                 {kit.promise}
               </p>
+
+              <div className="mt-4">
+                <PriceTag onSale={kit.onSale} size="lg" />
+              </div>
 
               <div className="mt-6 rounded-2xl border border-line bg-white p-5">
                 <p className="mb-3 flex items-center gap-2 font-display text-sm font-extrabold text-navy">

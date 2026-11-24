@@ -1,5 +1,6 @@
 import { Check, Eye } from "lucide-react";
 import { KitImage } from "./SmartImage.jsx";
+import PriceTag from "./PriceTag.jsx";
 import WhatsAppIcon from "./icons/WhatsAppIcon.jsx";
 import { getWhatsAppLink } from "../config/contact.js";
 
@@ -47,7 +48,12 @@ export default function KitCard({ kit, onOpen, index = 0 }) {
           ))}
         </ul>
 
-        <div className="mt-auto flex flex-col gap-3 pt-6 sm:flex-row">
+        <div className="mt-6 flex items-center justify-between gap-3 border-t border-dashed border-line pt-5">
+          <span className="text-sm font-semibold text-muted">Precio del kit</span>
+          <PriceTag onSale={kit.onSale} />
+        </div>
+
+        <div className="mt-auto flex flex-col gap-3 pt-5 sm:flex-row">
           <a
             href={getWhatsAppLink(kit.title)}
             target="_blank"
