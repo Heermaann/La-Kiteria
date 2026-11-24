@@ -57,9 +57,11 @@ export default function KitModal({ kit, onClose }) {
         </button>
 
         <div className="overflow-y-auto">
-          <div className="grid md:grid-cols-[260px_1fr]">
-            <div className="aspect-[2/1] border-b border-line md:aspect-auto md:min-h-full md:border-b-0 md:border-r">
-              <KitImage kit={kit} loading="eager" />
+          <div className="grid md:grid-cols-[300px_1fr] md:items-start">
+            <div className="px-6 pt-6 sm:px-8 sm:pt-8 md:sticky md:top-0 md:pr-0">
+              <div className="mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-2xl border border-line bg-cream shadow-soft md:max-w-none">
+                <KitImage kit={kit} loading="eager" />
+              </div>
             </div>
 
             <div className="p-6 sm:p-8">
